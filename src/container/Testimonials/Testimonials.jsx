@@ -43,7 +43,7 @@ const Testimonials = () => {
         <>
           <div className="app__testimonial-item app__flex">
             <img src={urlFor(test.imgurl)} alt="testimonial" />
-            <div className="app__estimonial-content">
+            <div className="app__testimonial-content">
               <p className="p-text">{test.feedback}</p>
               <div>
                 <h4 className="bold-text">{test.name}</h4>
@@ -63,7 +63,7 @@ const Testimonials = () => {
         </>
       )}
 
-      <div className="app__testimonials-brands app__flex">
+      <div className="app__testimonial-brands app__flex">
         {brands.map((brand) => (
           <motion.div
           whileinview={{opacity: [0, 1]}}
@@ -72,7 +72,7 @@ const Testimonials = () => {
           >
             {/* resolve issue here */}
             
-            {/* <img src={urlFor(brand.imgurl)} alt="brands" /> */}
+            <img src={urlFor(brand.imgUrl)} alt="brands" />
 
           </motion.div>
         ))}
@@ -83,6 +83,6 @@ const Testimonials = () => {
 
 export default AppWrap (
   MotionWrap(Testimonials, 'app__testimonial'), 
-    'testimonial',
+    'testimonials',
     "app__primarybg"
     );
